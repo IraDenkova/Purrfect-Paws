@@ -12,8 +12,8 @@ const moveEyes = keyframes`
 `
 const CatContainer = styled.div`
   position: relative;
-  top: -251px;
-  right: -735px;
+  top: -291px;
+  right: -605px;
 `
 const Eye = styled.div`
   position: absolute;
@@ -42,10 +42,10 @@ const CatHome = () => {
   return (
     <CatContainer>
       <img src={catImg} alt="cat" />
-      <EyeCircle style={{ left: '10%' }}>
+      <EyeCircle style={{ left: '11%' }}>
         <Eye />
       </EyeCircle>
-      <EyeCircle style={{ left: '6%' }}>
+      <EyeCircle style={{ left: '7%' }}>
         <Eye />
       </EyeCircle>
     </CatContainer>

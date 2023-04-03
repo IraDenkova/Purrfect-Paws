@@ -6,7 +6,7 @@ const Btn = styled.button`
   border-radius: 29px;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.09em;
   color: #FFFFFF;
   cursor: pointer;
@@ -14,7 +14,7 @@ const Btn = styled.button`
   overflow: hidden;
   position: relative;
   outline: none;
-  padding: 18px 33px;
+  padding: 16px 33px;
   z-index: 1;
   background-color: #E9A02D;
   
@@ -40,10 +40,10 @@ const Btn = styled.button`
   }
 `
 
-const Button = (props) => {
+const Button = ({text, onClick}) => {
   return (
-    <Btn>
-      {props.text}
+    <Btn onClick={onClick}>
+      {text}
     </Btn>
   )
 }

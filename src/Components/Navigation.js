@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Button from './Button'
 import Logo from './Logo'
@@ -9,7 +9,7 @@ const Section = styled.div`
   background-color: #FBF9F4;
 `
 const NavBar = styled.div`
-  width: 80%;
+  width: 70%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +24,8 @@ const Menu = styled.ul`
 `
 const MenuItem = styled.li`
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 18px;
   color: #080808;
   cursor: pointer;
   margin: 0 40px;
@@ -49,11 +50,9 @@ const MenuItem = styled.li`
 
 const Navigation = () => {
 
-  const [showOrderWindow, setShowOrderWindow] = useState(false);
-
-  const handleOrderClick = (e) => {
-    setShowOrderWindow(!e);
-  };
+  const [showStickyWindow, setShowStickyWindow] = useState(false);
+  const handleButtonClick = () => setShowStickyWindow(true);
+  const handleCloseClick = () => setShowStickyWindow(false);
 
   return (
     <Section>
@@ -64,8 +63,8 @@ const Navigation = () => {
           <MenuItem>Ingredients</MenuItem>
           <MenuItem>Faq</MenuItem>
         </Menu>
-        <Button onClick={handleOrderClick} text='Order now' />
-        {showOrderWindow && <OrderNow />}
+        <Button onClick={handleButtonClick} text='Order now' />
+        <OrderNow show={showStickyWindow} onCloseClick={handleCloseClick} />
       </NavBar>
     </Section>
   )

@@ -4,6 +4,7 @@ import Navigation from '../Navigation'
 import "@fontsource/raleway"
 import "@fontsource/raleway/300.css"
 import "@fontsource/raleway/800.css"
+import "@fontsource/archivo"
 import CatHome from '../CatHome'
 import VectorOne from '../VectorOne'
 import VectorTwo from '../VectorTwo'
@@ -13,7 +14,7 @@ const Section = styled.section`
   background-color: #FBF9F4;
 `
 const Container = styled.div`
-  width: 85%;
+  width: 70%;
   margin: 0 auto;
   color: #080808;
 `
@@ -23,7 +24,7 @@ const Title = styled.h1`
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   max-width: 1000px;
-  line-height: 115px;
+  line-height: 120px;
   span{
     font-weight: 800;
   }
@@ -33,8 +34,9 @@ const Text = styled.p`
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  max-width: 220px;
+  max-width: 200px;
   display: inline-block;
+  font-family: "Archivo", sans-serif;
 `
 const draw = keyframes`
   from {
@@ -75,15 +77,14 @@ const Home = () => {
     <Section>
       <Navigation />
       <Container>
-        <Title>GIVE <Text>Made with only the freshest ingredients, our cat food is the purrrfect choice for pet owners :)</Text><br />YOUR FURRY FRIEND <span>THE BEST</span></Title>
+        <Title>GIVE YOUR <Text>Made with only the freshest ingredients, our cat food is the purrrfect choice for pet owners :)</Text><br /> FURRY FRIEND <span>THE BEST</span></Title>
         <CatHome />
-        <VectorContainer style={{bottom: '20px', left: '60px'}}>
+        <VectorContainer style={{bottom: '90px', left: '30px', transform: 'rotate(90deg)'}}>
           <VectorOne />
         </VectorContainer>
-        <VectorContainer style={{ top: '180px', right: '310px' }}>
+        <VectorContainer style={{top: '150px', right: '130px'}}>
           <VectorTwo />
         </VectorContainer>
-        
       </Container>
     </Section>
   )
