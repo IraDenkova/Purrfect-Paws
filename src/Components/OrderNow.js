@@ -9,7 +9,7 @@ import styled from 'styled-components'
 import CloseImage from '../assets/close.svg'
 
 const Section = styled.section`
-  position: absolute;
+  position: fixed;
   height: 100vh;
   width: 100vw;
   background-color: #FBF9F4;
@@ -49,8 +49,8 @@ const Top = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  height: 120px;
-  margin-bottom: 90px;
+  height: 85px;
+  margin-bottom: 100px;
 `
 const Form = styled.form`
   display: flex;
@@ -64,6 +64,7 @@ const Input = styled.input`
   border: none;
   border-bottom: 2px solid #080808;
   margin-right: 43px;
+  outline: none;
 `
 const CloseButton = styled.button`
   border: none;

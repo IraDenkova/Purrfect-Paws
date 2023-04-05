@@ -7,6 +7,10 @@ import OrderNow from './OrderNow'
 const Section = styled.div`
   width: 100vw;
   background-color: #FBF9F4;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
 `
 const NavBar = styled.div`
   width: 70%;
@@ -14,7 +18,7 @@ const NavBar = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  height: 120px;
+  height: 85px;
 `
 const Menu = styled.ul`
   display: flex;
