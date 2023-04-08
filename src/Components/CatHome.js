@@ -32,6 +32,11 @@ const moveTail = keyframes`
 `
 const CatContainer = styled.div`
   position: relative;
+  background-image: url(${catImg});
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 367px;
+  height: 281px;
   top: -290px;
   right: -550px;
 `
@@ -59,19 +64,18 @@ const Tail = styled.img`
 const Nose = styled.img`
   position: absolute;
   top: 64px;
-  right: 593px;
+  right: 90px;
   animation: ${moveEyes} 1.3s linear infinite alternate;
 `
 
 const CatHome = () => {
   return (
     <CatContainer>
-      <img src={catImg} alt="cat" />
       <Tail src={catTail} />
-      <EyeCircle src={catCircle} style={{ right: '68%' }} />
-      <Eye src={catEye} style={{ right: '609px' }} />
-      <EyeCircle src={catCircle} style={{ right: '65%' }} />
-      <Eye src={catEye} style={{ right: '582px' }} />
+      <EyeCircle src={catCircle} style={{ right: '97px' }} />
+      <Eye src={catEye} style={{ right: '105px' }} />
+      <EyeCircle src={catCircle} style={{ right: '72px' }} />
+      <Eye src={catEye} style={{ right: '80px' }} />
       <Nose src={catNose} />
     </CatContainer>
   );

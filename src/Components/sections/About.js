@@ -11,21 +11,22 @@ import "@fontsource/raleway/800.css"
 import "@fontsource/archivo/200.css"
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import Advantages from '../Advantages';
 
 const Section = styled.section`
-  height: 80vh;
+  height: 120vh;
   padding: 50px 0;
 `
 const Backgroung = styled.img`
   position: absolute;
   width: 100vw;
-  height: 100%;
+  height: 1200px;
   z-index: 0;
-  transform: translateY(-25%);
+  transform: translateY(-12%);
 `
 const Container = styled.div`
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 180px;
   color: #080808;
   display: flex;
   justify-content: space-between;
@@ -182,6 +183,8 @@ const About = () => {
           </Text>
         </TextWrapper>
       </Container>
+      <Advantages />
+   
     </Section>
   )
 }

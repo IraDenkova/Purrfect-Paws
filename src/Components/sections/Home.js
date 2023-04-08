@@ -114,9 +114,7 @@ const Home = () => {
       <Navigation />
       <Container>
         <Title ref={titleRef} >GIVE YOUR FURRY FRIEND </Title>
-        <div style={{ position: 'relative' }} >
-          <TitleBold ref={titleBoldRef}>THE BEST</TitleBold>
-        </div>
+        <TitleBold ref={titleBoldRef}>THE BEST</TitleBold>
         <Text>Made with only the freshest ingredients, our cat food is the purrrfect choice for pet owners :)</Text>
         <CatHome />
         <VectorContainer style={{ bottom: '90px', left: '30px', transform: 'rotate(90deg)' }}>
