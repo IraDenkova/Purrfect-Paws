@@ -20,9 +20,9 @@ const Section = styled.section`
 const Backgroung = styled.img`
   position: absolute;
   width: 100vw;
-  height: 1200px;
+  height: 1100px;
   z-index: 0;
-  transform: translateY(-12%);
+  transform: translateY(-14%);
 `
 const Container = styled.div`
   width: 80%;
