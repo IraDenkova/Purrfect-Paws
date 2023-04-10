@@ -11,11 +11,10 @@ import steps from '../../assets/steps.png'
 
 
 const Section = styled.section`
-  height: 100vh;
-  padding-top: 200px; 
+  padding: 220px 0 150px; 
   background-image: url(${steps});
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 `
 const Box = styled.div`
   width: 55%;
@@ -43,22 +42,19 @@ const Title = styled.h1`
     }
   }
 `
-const Items = styled.div`
-
-`
 
 const Ingredients = () => {
   return (
     <Section>
       <Box>
         <Title><span>BEST</span> INGREDIENTS </Title>
-        <Items>
+        <div>
           <IngredientItem number='1' bold='High-quality protein sources:' text='chicken, turkey, beef, fish, or lamb, as the first ingredient.' />
           <IngredientItem number='2' bold='Essential fatty acids:' text='fish oil or flaxseed.' />
           <IngredientItem number='3' bold='Natural ingredients:' text='fruits and vegetables.' />
           <IngredientItem number='4' bold='Vitamins and minerals:' text='vitamin A, vitamin D, vitamin E, taurine, and calcium.' />
           <IngredientItem number='5' bold='Probiotics:' text='lactobacillus acidophilus or bifidobacterium animalis.' />
-        </Items>
+        </div>
       </Box>
     </Section>
   )

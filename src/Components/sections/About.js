@@ -17,7 +17,7 @@ const Section = styled.section`
   height: 120vh;
   padding: 50px 0;
 `
-const Backgroung = styled.img`
+const Background = styled.img`
   position: absolute;
   width: 100vw;
   height: 1100px;
@@ -162,7 +162,7 @@ const About = () => {
 
   return (
     <Section>
-      <Backgroung src={bg} />
+      <Background src={bg} />
       <Container>
         <div>
         <CatImageRight src={catImageRight} />
