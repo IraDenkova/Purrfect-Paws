@@ -1,4 +1,6 @@
-import React from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 
 const Item = styled.p`
@@ -22,8 +24,32 @@ const Number = styled.p`
 
 
 const IngredientItem = ({number, bold, text}) => {
+
+  const itemRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.fromTo(
+      itemRef.current,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: itemRef.current,
+          start: 'top 80%',
+        },
+      }
+    );
+  }, []);
+
   return (
-    <Item>
+    <Item ref={itemRef}>
       <Number>{number}</Number>
       <span>{bold} </span>
       {text}

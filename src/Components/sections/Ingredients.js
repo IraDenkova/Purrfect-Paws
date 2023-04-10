@@ -44,6 +44,9 @@ const Title = styled.h1`
 `
 
 const Ingredients = () => {
+  
+  
+
   return (
     <Section>
       <Box>

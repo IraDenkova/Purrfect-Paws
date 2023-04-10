@@ -62,7 +62,7 @@ const Footer = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: logoRef.current,
-        start: 'top top-=100',
+        start: 'top top+=500',
         end: 'bottom center',
       }
     });
