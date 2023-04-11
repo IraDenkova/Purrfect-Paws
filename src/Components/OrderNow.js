@@ -93,6 +93,7 @@ const Input = styled.input`
 `
 const CloseButton = styled.button`
   border: none;
+  color: #080808;
   background-color: transparent;
   cursor: pointer;
   position: relative;

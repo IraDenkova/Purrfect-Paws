@@ -18,7 +18,7 @@ const Section = styled.section`
   padding-top: 130px;
   background-color: #FBF9F4;
   @media(max-width: 400px) {
-    padding-top: 110px;
+    padding-top: 10rem;
   }
 `
 const Container = styled.div`
@@ -39,7 +39,7 @@ const Title = styled.h1`
   line-height: 120px;
   @media(max-width: 400px) {
     font-size: 53px;
-    line-height: 68px;
+    line-height: 58px;
   }
 `
 const TitleBold = styled.h1`
@@ -49,7 +49,7 @@ const TitleBold = styled.h1`
   font-weight: 800;
   @media(max-width: 400px) {
     font-size: 55px;
-    line-height: 60px;
+    line-height: 59px;
   }
 `
 const Text = styled.p`
@@ -63,12 +63,13 @@ const Text = styled.p`
   max-width: 200px;
   font-family: "Archivo", sans-serif;
   @media(max-width: 400px) {
-    position: static;
+    right: 0;
+    padding: 0 15px;
+    top: auto;
+    bottom: 1rem;
     font-size: 14px;
     line-height: 20px;
     max-width: 100%;
-    margin-bottom: 10px;
-    order: -1;
   }
 `
 const draw = keyframes`

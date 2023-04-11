@@ -11,27 +11,32 @@ import "@fontsource/raleway/800.css"
 import "@fontsource/archivo/200.css"
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import Advantages from '../Advantages';
 
 const Section = styled.section`
-  height: 120vh;
   padding: 50px 0;
 `
 const Background = styled.img`
   position: absolute;
   width: 100vw;
-  height: 1100px;
   z-index: 0;
   transform: translateY(-14%);
+  @media(max-width: 400px){
+    object-fit: cover;
+    transform: translateY(-28%);
+  }
 `
 const Container = styled.div`
   width: 80%;
-  margin: 0 auto 180px;
+  margin: 0 auto 160px;
   color: #080808;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  @media(max-width: 400px){
+    width: 90%;
+    margin: 0 auto 110px;
+  }
 `
 const Title = styled.h1`
   font-size: 80px;
@@ -40,6 +45,10 @@ const Title = styled.h1`
   margin-bottom: 40px;
   span{
      font-weight: 800;
+  }
+  @media(max-width: 400px){
+    font-size: 47px;
+    text-align: center;
   }
 `
 const toRight = keyframes`
@@ -74,6 +83,9 @@ const toLeft = keyframes`
     opacity: 1;
   }
 `
+const CatContainer = styled.div`
+  
+`
 const CatImageRight = styled.img`
   top: 40px;
   position: absolute;
@@ -84,6 +96,11 @@ const CatImageRight = styled.img`
   z-index: 10;
   opacity: 1;
   animation: ${toRight} 6s ease-in-out infinite;
+  @media(max-width: 400px){
+    top: 0;
+    width: 295px;
+    height: 250px;
+  }
 `
 const CatImageLeft = styled.img`
   top: 40px;
@@ -95,9 +112,17 @@ const CatImageLeft = styled.img`
   max-height: 345px;
   max-width: 390px;
   animation: ${toLeft} 3s ease-in-out infinite alternate;
+  @media(max-width: 400px){
+    top: 0;
+    width: 295px;
+    height: 250px;
+  }
 `
 const TextWrapper = styled.div`
   max-width: 510px;
+  @media(max-width: 400px){
+    padding-top: 325px;
+  }
 `
 const Text = styled.div`
   max-width: 510px;
@@ -164,10 +189,10 @@ const About = () => {
     <Section>
       <Background src={bg} />
       <Container>
-        <div>
-        <CatImageRight src={catImageRight} />
-        <CatImageLeft src={catImageLeft} />
-        </div>
+        <CatContainer>
+          <CatImageRight src={catImageRight} />
+          <CatImageLeft src={catImageLeft} />
+        </CatContainer>
         <TextWrapper>
           <Title ref={titleRef}>ABOUT <span>US</span></Title>
           <Text ref={textRef}>
@@ -183,8 +208,7 @@ const About = () => {
           </Text>
         </TextWrapper>
       </Container>
-      <Advantages />
-   
+      
     </Section>
   )
 }

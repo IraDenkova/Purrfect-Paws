@@ -39,9 +39,10 @@ const CatContainer = styled.div`
   height: 281px;
   top: -290px;
   right: -550px;
+  z-index: 1; 
   @media(max-width: 400px){
-    top: -40px;
-    right: -20px;
+    top: -4rem;
+    right: -1rem;
     width: 297px;
     height: 210px;
     margin: 0 0 0 auto;
@@ -77,6 +78,7 @@ const Tail = styled.img`
   top: 80%;
   left: 0%;
   animation: ${moveTail} 2.5s ease-in-out infinite alternate;
+  
   @media(max-width: 400px){
     width: 100px;
     height: 100px;

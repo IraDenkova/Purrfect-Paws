@@ -11,10 +11,16 @@ import steps from '../../assets/steps.png'
 
 
 const Section = styled.section`
-  padding: 220px 0 150px; 
+  padding: 200px 0 150px; 
   background-image: url(${steps});
   background-repeat: no-repeat;
   background-size: contain;
+  @media(max-width: 400px){
+    background-image: none;
+    padding: 25px 0 0; 
+    background-color: #FBF9F4;
+    margin-top: 100px;
+  }
 `
 const Box = styled.div`
   width: 55%;
@@ -23,6 +29,11 @@ const Box = styled.div`
   box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   padding: 70px 50px 20px 50px;
+  @media(max-width: 400px){
+    width: 90%;
+    box-shadow: none;
+    padding: 50px 25px;
+  }
 `
 const Title = styled.h1`
   font-size: 70px;
@@ -40,6 +51,14 @@ const Title = styled.h1`
       top: -26px;
       left: -24px;
     }
+  }
+  @media(max-width: 400px){
+    font-size: 47px;
+    line-height: 51px;
+    margin: 0 auto 45px;
+     span::before{
+      display: none;
+     }
   }
 `
 

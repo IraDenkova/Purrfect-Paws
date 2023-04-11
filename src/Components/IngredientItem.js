@@ -7,11 +7,15 @@ const Item = styled.p`
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  position: relative;
   padding: 27px 0;
   display: inline-block;
   span{
     font-weight: 600;
+  }
+  @media(max-width: 400px){
+    font-size: 14px;
+    line-height: 18px;
+    padding: 15px 0;
   }
 `
 const Number = styled.p`
@@ -19,6 +23,11 @@ const Number = styled.p`
   font-weight: 700;
   font-size: 60px;
   padding-right: 30px;
+  @media(max-width: 400px){
+    font-size: 44px;
+    line-height: 48px;
+    padding-right: 22px;
+  }
 `
 
 
