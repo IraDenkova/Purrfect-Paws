@@ -38,6 +38,9 @@ const Btn = styled.button`
     transform-origin: 100px 100px;
     transform: scale(1);
   }
+  @media(max-width: 400px){
+    padding: 14px 28px;
+  }
 `
 
 const Button = ({text, onClick}) => {

@@ -39,6 +39,13 @@ const CatContainer = styled.div`
   height: 281px;
   top: -290px;
   right: -550px;
+  @media(max-width: 400px){
+    top: -40px;
+    right: -20px;
+    width: 297px;
+    height: 210px;
+    margin: 0 0 0 auto;
+  }
 `
 const Eye = styled.img`
   position: absolute;
@@ -46,6 +53,11 @@ const Eye = styled.img`
   transform: matrix(1, 0, 0, 1, 0, 0);
   z-index: 50;
   animation: ${moveEyes} 1.3s linear infinite alternate;
+  @media(max-width: 400px){
+    width: 9px;
+    height: 11px;
+    top: 33px;
+  }
 `
 
 const EyeCircle = styled.img`
@@ -54,18 +66,32 @@ const EyeCircle = styled.img`
   transform: matrix(1, 0, 0, 1, 0, 0);
   z-index: 45;
   animation: ${moveCircles} 1.3s linear infinite alternate;
+  @media(max-width: 400px){
+    width: 16px;
+    height: 16px;
+    top: 33px;
+  }
 `
 const Tail = styled.img`
   position: absolute;
   top: 80%;
   left: 0%;
   animation: ${moveTail} 2.5s ease-in-out infinite alternate;
+  @media(max-width: 400px){
+    width: 100px;
+    height: 100px;
+  }
 `
 const Nose = styled.img`
   position: absolute;
   top: 64px;
   right: 90px;
   animation: ${moveEyes} 1.3s linear infinite alternate;
+  @media(max-width: 400px){
+    top: 54px;
+    width: 12px;
+    height: 10px;
+  }
 `
 
 const CatHome = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import "@fontsource/atma"
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 const LogoText = styled.h1`
@@ -28,6 +28,13 @@ const LogoText = styled.h1`
   &:hover::after,
   &:hover::before{
     opacity: 1;
+  }
+   @media(max-width: 400px) {
+    font-size: 36px;
+    &::after,
+    &::before{
+      display: none;
+    }
   }
 `
 

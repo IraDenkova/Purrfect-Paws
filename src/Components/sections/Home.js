@@ -17,11 +17,19 @@ const Section = styled.section`
   height: 100vh;
   padding-top: 130px;
   background-color: #FBF9F4;
+  @media(max-width: 400px) {
+    padding-top: 110px;
+  }
 `
 const Container = styled.div`
   width: 70%;
   margin: 0 auto;
   color: #080808;
+  @media(max-width: 400px) {
+     width: 90%;
+     display: flex;
+     flex-direction: column;
+  }
 `
 const Title = styled.h1`
   font-size: 110px;
@@ -29,12 +37,20 @@ const Title = styled.h1`
   font-weight: 300;
   max-width: 1000px;
   line-height: 120px;
+  @media(max-width: 400px) {
+    font-size: 53px;
+    line-height: 68px;
+  }
 `
 const TitleBold = styled.h1`
   font-size: 110px;
   font-family: "Raleway", sans-serif;
   line-height: 120px;
   font-weight: 800;
+  @media(max-width: 400px) {
+    font-size: 55px;
+    line-height: 60px;
+  }
 `
 const Text = styled.p`
   position: absolute;
@@ -46,6 +62,14 @@ const Text = styled.p`
   line-height: 18px;
   max-width: 200px;
   font-family: "Archivo", sans-serif;
+  @media(max-width: 400px) {
+    position: static;
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 100%;
+    margin-bottom: 10px;
+    order: -1;
+  }
 `
 const draw = keyframes`
   from {
@@ -58,6 +82,9 @@ const draw = keyframes`
 const VectorContainer = styled.div`
   position: absolute;
   z-index: 10;
+   @media(max-width: 400px) {
+    display: none;
+  }
   svg path {
     stroke-dasharray: 100%;
     animation: ${draw} 3s ease-in forwards;
@@ -113,7 +140,7 @@ const Home = () => {
     <Section ref={section}>
       <Navigation />
       <Container>
-        <Title ref={titleRef} >GIVE YOUR FURRY FRIEND </Title>
+        <Title ref={titleRef}>GIVE YOUR FURRY FRIEND </Title>
         <TitleBold ref={titleBoldRef}>THE BEST</TitleBold>
         <Text>Made with only the freshest ingredients, our cat food is the purrrfect choice for pet owners :)</Text>
         <CatHome />

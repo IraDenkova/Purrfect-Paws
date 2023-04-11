@@ -24,6 +24,9 @@ const Container = styled.div`
   width: 60%;
   margin: 0 auto;
   color: #080808;
+  @media(max-width: 400px){
+    width: 90%;
+  }
 `
 const Title = styled.h1`
   font-size: 90px;
@@ -32,6 +35,12 @@ const Title = styled.h1`
   margin-bottom: 90px;
   span{
     font-weight: 800;
+  }
+  @media(max-width: 400px){
+    font-size: 48px;
+    line-height: 52px;
+    margin-bottom: 70px;
+    text-align: center;
   }
 `
 const Text = styled.p`
@@ -42,6 +51,11 @@ const Text = styled.p`
   max-width: 140px;
   display: inline-block;
   font-family: "Archivo", sans-serif;
+  @media(max-width: 400px){
+    max-width: 100%;
+    font-size: 14px;
+    display: block;
+  }
 `
 const Top = styled.div`
   width: 70%;
@@ -51,10 +65,17 @@ const Top = styled.div`
   margin: 0 auto;
   height: 85px;
   margin-bottom: 100px;
+  @media(max-width: 400px){
+    width: 90%;
+    height: 75px;
+  }
 `
 const Form = styled.form`
   display: flex;
   align-items: center;
+  @media(max-width: 400px){
+    flex-direction: column;
+  }
 `
 const Input = styled.input`
   padding: 5px;
@@ -65,6 +86,10 @@ const Input = styled.input`
   border-bottom: 2px solid #080808;
   margin-right: 43px;
   outline: none;
+  @media(max-width: 400px){
+    width: 90%;
+    margin: 0 auto 20px;
+  }
 `
 const CloseButton = styled.button`
   border: none;
@@ -88,10 +113,10 @@ const CloseButton = styled.button`
 const OrderNow = ({ show, onCloseClick }) => {
   return (
     <Section show={show}>
-        <Top>
-          <Logo />
-          <CloseButton onClick={onCloseClick}>Close</CloseButton>
-        </Top>
+      <Top>
+        <Logo />
+        <CloseButton onClick={onCloseClick}>Close</CloseButton>
+      </Top>
       <Container>
         <Title>
           ORDER <span>NOW </span>

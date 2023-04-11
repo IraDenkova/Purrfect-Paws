@@ -19,12 +19,19 @@ const NavBar = styled.div`
   align-items: center;
   margin: 0 auto;
   height: 85px;
+  @media(max-width: 400px) {
+    width: 90%;
+    height: 75px;
+  }
 `
 const Menu = styled.ul`
   display: flex;
   align-items: center;
   justify-content: space-between;
   list-style: none;
+  @media(max-width: 400px){
+    display: none;
+  }
 `
 const MenuItem = styled.li`
   font-weight: 400;
