@@ -13,7 +13,7 @@ import Twitter from '../../assets/Twitter.png'
 import YouTube from '../../assets/YouTube.png'
 
 const Section = styled.section`
-  backgroung-color: #FBF9F4;
+  background-color: #FBF9F4;
   position: relative;
 `
 const Container = styled.div`
@@ -24,6 +24,9 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 15px 0;
+  @media(max-width: 400px){
+    padding-bottom: 40px;
+  }
 `
 const Background = styled.img`
   position: absolute;
@@ -32,6 +35,9 @@ const Background = styled.img`
   bottom: 0;
   left: 0;
   height: 230px;
+  @media(max-width: 400px){
+    object-fit: cover;
+  }
 `
 const Links = styled.ul`
   display: flex;
@@ -44,6 +50,9 @@ const Links = styled.ul`
 const Copyright = styled.p`
   text-align: center;
   z-index: 1;
+  @media(max-width: 400px){
+    font-size: 12px;
+  }
 `
 const LinkItem = styled.img`
     transition: all .2s;

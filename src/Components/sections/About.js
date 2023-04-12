@@ -13,7 +13,10 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
 const Section = styled.section`
-  padding: 50px 0;
+  padding: 80px 0 50px;
+  @media(max-width: 400px){
+     padding: 50px 0;
+  }
 `
 const Background = styled.img`
   position: absolute;
@@ -186,7 +189,7 @@ const About = () => {
   }, []);
 
   return (
-    <Section>
+    <Section id='about'>
       <Background src={bg} />
       <Container>
         <CatContainer>

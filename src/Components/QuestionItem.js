@@ -11,7 +11,7 @@ const Item = styled.div`
   border-bottom-left-radius: ${props => props.isOpen ? '0px' : '33px'};
   border-bottom-right-radius: ${props => props.isOpen ? '0px' : '33px'};
   padding: 24px 16px 24px 30px;
-  margin-bottom: ${props => props.isOpen ? '0px' : '27px'};
+  margin-bottom: ${props => props.isOpen ? '0px' : '20px'};
   cursor: pointer;
   position: relative;
   &::after{
@@ -24,6 +24,14 @@ const Item = styled.div`
     transition: transform 0.3s ease;
     transform: ${props => props.isOpen ? 'rotate(45deg)' : 'rotate(0)'};
   }
+  @media(max-width: 400px){
+    font-size: 14px;
+    padding: 20px 16px 20px 20px;
+    &::after{
+    font-size: 36px;
+    right: 15px;
+  }
+}
 `
 const Dropdown = styled.div`
   background-color: #FBF9F4;
@@ -36,7 +44,12 @@ const Dropdown = styled.div`
   display: ${props => props.isOpen ? 'block' : 'none'};
   overflow: hidden;
   margin-bottom: 27px;
-`;
+  @media(max-width: 400px){
+    font-size: 12px;
+    padding: 10px 20px 20px;
+    margin-bottom: 20px;
+  }
+`
 
 
 const QuestionItem = ({question, answer}) => {

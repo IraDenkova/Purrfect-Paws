@@ -31,8 +31,10 @@ const Box = styled.div`
   padding: 70px 50px 20px 50px;
   @media(max-width: 400px){
     width: 90%;
+    max-width: fit-content;
     box-shadow: none;
     padding: 50px 25px;
+    border-radius: 0;
   }
 `
 const Title = styled.h1`
@@ -67,7 +69,7 @@ const Ingredients = () => {
   
 
   return (
-    <Section>
+    <Section id='ingredients'>
       <Box>
         <Title><span>BEST</span> INGREDIENTS </Title>
         <div>

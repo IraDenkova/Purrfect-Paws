@@ -9,6 +9,9 @@ const Paw = styled.img`
   position: absolute;
   left: 0;
   bottom: 160px;
+  @media(max-width: 400px){
+    display: none;
+  }
 `
 
 const CatPawFour = () => {

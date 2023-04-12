@@ -15,11 +15,17 @@ const Section = styled.section`
   padding-bottom: 240px ;
   background-color: #9FA672;
   position: relative;
+  @media(max-width: 400px){
+    padding: 50px 0 120px;
+  }
 `
 const Container = styled.div`
   width: 60%;
   margin: 0 auto;
   color: #080808;
+  @media(max-width: 400px){
+    width: 90%;
+  }
 `
 const Title = styled.h1`
   font-family: "Raleway", sans-serif;
@@ -29,11 +35,16 @@ const Title = styled.h1`
   line-height: 80px;
   color: #FBF9F4;
   margin-bottom: 70px;
+  @media(max-width: 400px){
+    font-size: 47px;
+    line-height: 54px;
+    margin-bottom: 50px;
+  }
 `
 
 const Faq = () => {
   return (
-    <Section>
+    <Section id='faq'>
       <CatPawOne />
       <CatPawTwo />
       <CatPawThree />

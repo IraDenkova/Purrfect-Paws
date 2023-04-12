@@ -65,14 +65,23 @@ const Navigation = () => {
   const handleButtonClick = () => setShowStickyWindow(true);
   const handleCloseClick = () => setShowStickyWindow(false);
 
+  const scrollTo = (id) => {
+    let element = document.getElementById(id)
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    })
+  }
+
   return (
     <Section>
       <NavBar>
         <Logo />
         <Menu>
-          <MenuItem>About Us</MenuItem>
-          <MenuItem>Ingredients</MenuItem>
-          <MenuItem>Faq</MenuItem>
+          <MenuItem onClick={() => scrollTo('about')}>About Us</MenuItem>
+          <MenuItem onClick={() => scrollTo('ingredients')}>Ingredients</MenuItem>
+          <MenuItem onClick={() => scrollTo('faq')}>Faq</MenuItem>
         </Menu>
         <Button onClick={handleButtonClick} text='Order now' />
         <OrderNow show={showStickyWindow} onCloseClick={handleCloseClick} />
